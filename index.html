@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" media="all" />
+    <title>Stardew Food Comparison</title>
+    <style>
+      th {
+        border: 2px solid #444;
+        padding: 0.5em 1.5em;
+      }
+      td {
+        padding-inline: 1em;
+        max-width: 24ch;
+      }
+      .name {
+        font-size: 1.2rem;
+      }
+      .health,
+      .sell,
+      .energy {
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+      .energy {
+        color: #0a0;
+      }
+      .health {
+        color: #a00;
+      }
+      .sell {
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module" src="/main.js"></script>
+    <table id="recipes">
+      <tr>
+        <th>Name</th>
+        <th>Ingredients</th>
+        <th>Stats</th>
+        <th>Source</th>
+        <th>Energy</th>
+        <th>Health</th>
+        <th>Sell</th>
+      </tr>
+    </table>
+    <template id="recipe-template">
+      <tr class="recipe">
+        <td>
+          <h3 class="name"></h3>
+        </td>
+        <td>
+          <ul class="ingredients"></ul>
+        </td>
+        <td>
+          <ul class="stats"></ul>
+        </td>
+        <td>
+          <ul class="sources"></ul>
+        </td>
+        <td class="energy"></td>
+        <td class="health"></td>
+        <td class="sell"></td>
+      </tr>
+    </template>
+  </body>
+</html>
